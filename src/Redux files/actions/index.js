@@ -12,10 +12,17 @@ export const getData = (characters) => {
   }
 }
 
-export const addFevourite = (favourite) => {
+export const addFevourite = payload => {
   return {
     type: "ADDFAVORITE",
-    payload: favourite
+    payload: payload
+  }
+}
+
+export const removeFevourite = payload => {
+  return {
+    type: "REMOVEFAVORITE",
+    payload: payload
   }
 }
 

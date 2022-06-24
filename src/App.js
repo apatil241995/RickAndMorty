@@ -1,10 +1,17 @@
 import './App.css';
-import Characinfo from "./reactFiles/charactercard"
+import Characinfo from "./reactFiles/characterInfo"
+import FavouriteInfo from './reactFiles/Favourite/favouriteInfo';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
-    <Characinfo></Characinfo>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Characinfo />} />
+        <Route path='/favInfo' element={<FavouriteInfo />} />
+      </Routes>
+    </Router>
   )
 }
 
